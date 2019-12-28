@@ -11,3 +11,8 @@
 .panel-default{
 	margin: 0 10px 0 10px;
 }
+
+.alert{
+	margin-left: 10px;
+	margin-right: 10px;
+}
