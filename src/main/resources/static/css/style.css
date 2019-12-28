@@ -1,0 +1,13 @@
+.navbar{
+	background-color: #213F7F;
+}
+
+.navbar-header span{
+	color: white;
+	font-weight: bold;
+	font-size: large;
+}
+
+.panel-default{
+	margin: 0 10px 0 10px;
+}
