@@ -38,7 +38,11 @@
 						<td class="text-center"><span
 							th:text="${titulo.status.descricao}"></span>
 						</td>
-						<td class="text-center"></td>
+						<td class="text-center">
+						<a th:href="@{/titulos/{codigo}(codigo=${titulo.codigo})}">Editar</a>
+						<a>Excluir</a>
+						
+						</td>
 					</tr>
 					<tr>
 						<td colspan="6" th:if="${#lists.isEmpty(titulos)}">Nenhum
