@@ -72,4 +72,12 @@ public class TituloController {
 		
 	}
 	
+	@RequestMapping("/excluir/{codigo}")
+	public ModelAndView excluir(@PathVariable Long codigo) {
+		titulos.deleteById(codigo);
+		ModelAndView mv = new ModelAndView("redirect:/titulos");
+		return mv;
+		
+	}
+	
 }
