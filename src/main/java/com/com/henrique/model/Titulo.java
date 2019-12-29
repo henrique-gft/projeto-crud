@@ -11,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.NumberFormat;
@@ -22,12 +24,16 @@ public class Titulo {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo;
 	
+	
+	@NotBlank(message = "Descricao é obrigatória")
 	private String descricao;
 	
+	@NotNull(message = "Data é obrigatória")
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	@Temporal(TemporalType.DATE)
 	private Date dataVencimento;
 	
+	@NotNull(message = "Valor é obrigatório")
 	@NumberFormat(pattern = "#,##0.00")
 	private BigDecimal valor;
 	
@@ -87,9 +93,5 @@ public class Titulo {
 			return false;
 		return true;
 	}
-	
-
-	
-	
 	
 }
